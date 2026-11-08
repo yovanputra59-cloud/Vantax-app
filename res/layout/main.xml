@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#050008">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="60dp" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="☰" android:textColor="#FFF" android:textSize="24sp" android:paddingRight="20dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VANTAX//" android:textColor="#FFF" android:textSize="20sp" android:textStyle="bold"/>
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" KingzsDev " android:textColor="#A855F7" android:textSize="12sp" android:background="#1A0A2E" android:padding="8dp"/>
+        </LinearLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="200dp" android:layout_marginTop="16dp" android:background="#120022" android:padding="2dp">
+            <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="BANNER SLOT" android:textColor="#A1A1AA" android:textSize="12sp" android:gravity="center"/>
+        </FrameLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:orientation="vertical" android:background="#120022" android:padding="20dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView android:layout_width="60dp" android:layout_height="60dp" android:text="K" android:textColor="#FFF" android:textSize="24sp" android:gravity="center" android:background="#7C3AED"/>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:paddingLeft="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KINGZSDEV" android:textColor="#FFF" android:textSize="18sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" OWNER " android:textColor="#C084FC" android:textSize="10sp" android:background="#1A0A2E" android:layout_marginTop="4dp"/>
+                </LinearLayout>
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚙" android:textColor="#A1A1AA" android:textSize="24sp"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="24dp" android:weightSum="3">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="#0E001A" android:padding="12dp" android:layout_marginRight="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="👤" android:textSize="18sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:textColor="#A855F7" android:textSize="12sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="USER" android:textColor="#71717A" android:textSize="10sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="#0E001A" android:padding="12dp" android:layout_marginRight="8dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="✓" android:textColor="#22C55E" android:textSize="18sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ACTIVE" android:textColor="#22C55E" android:textSize="12sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STATUS" android:textColor="#71717A" android:textSize="10sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="#0E001A" android:padding="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="📅" android:textColor="#3B82F6" android:textSize="18sp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:textColor="#3B82F6" android:textSize="12sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="EXPIRED" android:textColor="#71717A" android:textSize="10sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
