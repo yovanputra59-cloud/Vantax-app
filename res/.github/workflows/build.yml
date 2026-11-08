@@ -1,0 +1,35 @@
+name: Build Android APK
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+    - name: Build APK
+      run: |
+        wget https://github.com/Sable/android-platforms/raw/master/android-34/android.jar
+        export ANDROID_JAR=$PWD/android.jar
+        mkdir -p build/gen build/obj
+        aapt package -f -m -J build/gen -M AndroidManifest.xml -S res -I $ANDROID_JAR
+        javac -source 8 -target 8 -d build/obj -classpath $ANDROID_JAR src/com/kingzsdev/vantax/MainActivity.java build/gen/com/kingzsdev/vantax/R.java
+        d8 --lib $ANDROID_JAR --output build/ build/obj/com/kingzsdev/vantax/*.class
+        cd build
+        aapt package -f -M ../AndroidManifest.xml -S ../res -I $ANDROID_JAR -F vantax.unaligned.apk
+        zip -u -0 vantax.unaligned.apk classes.dex
+        zipalign -f 4 vantax.unaligned.apk vantax.aligned.apk
+        keytool -genkey -v -keystore vantax.keystore -alias vantax -keyalg RSA -keysize 2048 -validity 10000 -storepass vantax123 -keypass vantax123 -dname "CN=Vantax" -noprompt
+        apksigner sign --ks vantax.keystore --ks-pass pass:vantax123 --key-pass pass:vantax123 --out vantax.apk vantax.aligned.apk
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: Vantax-APK
+        path: build/vantax.apk
